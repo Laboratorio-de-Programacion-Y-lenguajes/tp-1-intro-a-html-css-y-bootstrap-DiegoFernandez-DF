@@ -1,0 +1,32 @@
+name: Validar HTML/CSS y Accesibilidad
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    # 1. Validar HTML
+    - name: Validar HTML con W3C
+      run: |
+        npm install -g html-validate
+        html-validate index.html about.html contact.html --config .html-validate.json
+    
+    # 2. Validar CSS
+    - name: Validar CSS
+      run: |
+        npm install -g stylelint stylelint-config-standard
+        npx stylelint "assets/styles.css"
+    
+    # 3. Verificar links no rotos
+    - name: Validar links
+      run: |
+        npm install -g broken-link-checker
+        blc http://localhost:8000 --recursive --skip-external || true

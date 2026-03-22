@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Herramientas
+node_modules/
+.env
+*.log

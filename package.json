@@ -1,0 +1,13 @@
+{
+  "name": "blog-personal-tp",
+  "version": "1.0.0",
+  "description": "TP Semana 1: Blog con HTML, CSS y Bootstrap",
+  "scripts": {
+    "test": "html-validate index.html about.html contact.html && stylelint 'assets/styles.css'"
+  },
+  "devDependencies": {
+    "html-validate": "^8.11.0",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0"
+  }
+}
