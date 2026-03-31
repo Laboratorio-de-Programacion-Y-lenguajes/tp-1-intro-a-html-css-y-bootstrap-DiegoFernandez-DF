@@ -1,8 +1,8 @@
 /* ===== Variables CSS ===== */
 :root {
     --primary-color: #0d6efd;
-    --text-color: #212529;
-    --light-bg: #f8f9fa;
+    --text-color: #dee2e6;
+    --light-bg: #14213d;
     --border-color: #dee2e6;
 }
 
@@ -21,6 +21,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--light-bg);
 }
 
 /* ===== Tipografía ===== */
